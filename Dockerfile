@@ -1,5 +1,5 @@
 # Fetching the minified node image on apline linux
-FROM node:slim
+FROM node:18-alpine
 
 # Setting up the work directory
 WORKDIR /express-docker
