@@ -14,4 +14,4 @@ RUN npm install
 CMD [ "node", "index.js" ]
 
 # Exposing server port
-EXPOSE 3000 # Replace 3000 with your app's port
+EXPOSE 3000 
