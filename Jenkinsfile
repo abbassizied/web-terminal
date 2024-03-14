@@ -51,13 +51,19 @@ pipeline {
 
         stage('Run our image') {
             steps {
+                sh 'docker stop $(docker ps -a -q)'	
+				
+                sh 'docker remove $(docker ps -a -q)'
+				
 				echo " =========== ^^^^^^^^^^^^ Testing by running docker-compose .."
-
+ 
 				sh 'docker run -d -p 3000:3000 ${IMG_APP}'
+				
+				echo " =========== ~~~~~~~~~~~~ ============ "
 						
                 echo 'check the status of containers running on the Jenkins host machine ..'
 				
-				sh 'docker ps'
+				sh 'docker ps'	
 				
 				echo " =========== ~~~~~~~~~~~~ ============ "
 				
