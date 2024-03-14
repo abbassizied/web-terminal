@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<%- include('./partials/head'); %>
+	<title>Mini Terminal</title>
+</head>
+<body>
+
+	<%- include('./partials/header'); %>
+	
+    <pre>
+	<code>
+	#
+	ping google.com
+	# Send any command output to a text file.
+	ping -t > c:\it\test-ping.txt
+	# To view the IP configuration for all network cards on a computer type the command below and press enter.
+	ipconfig /all
+	# The tracert command is used to track the pathway a packet takes from a source IP to the destination address.
+	tracert google.com
+	# Display all active and listening ports.
+	netstat -a
+	# Display all connections in numerical order.
+	netstat -a -n
+	# Get the current logged on user
+	whoami
+	# Terminate a process by the PID number. In this example, I forcefully end process PID 1808.
+	taskkill /pid 1808 /f
+	# To display a list of disks on the local computer is these commands.
+	diskpart
+	list disk
+	# ...
+	</code>
+	</pre>
+	
+	<%- include('./partials/footer'); %>	
+ 
+</body>
+</html>

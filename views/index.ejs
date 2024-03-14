@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partials/head'); %>
+    <title>Mini Terminal</title>
+  </head>
+  <body>
+    <%- include('./partials/header'); %>
+
+    <div class="terminal">
+      <p><b>Web-Shell v0.1</b></p>
+      <p>Feel free to play with any shell cmd ✌️</p>
+      <pre id="output"></pre>
+      <textarea id="userInput" rows="5" autofocus></textarea>
+    </div>
+
+    <%- include('./partials/footer'); %>
+  </body>
+</html>

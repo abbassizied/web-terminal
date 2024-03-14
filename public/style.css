@@ -1,0 +1,40 @@
+body {
+    font-family: monospace;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+}
+
+.terminal {
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+}
+
+#output {
+    margin: 0;
+    padding: 0;
+    white-space: pre-wrap;
+}
+
+#userInput {
+    background-color: transparent;
+    color: inherit;
+    border: none;
+    resize: none;
+    width: 100%;
+    outline: none;
+}
+
+#userInput:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+a {
+  font-size: 28px; /* Set font size to 18 pixels */
+  font-family: "Times New Roman", Georgia, serif; /* Define preferred fonts with fallback options */
+  color: white; /* Set text color to white */
+}
