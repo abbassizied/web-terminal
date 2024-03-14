@@ -1,9 +1,17 @@
-FROM node:18.17.0-alpine
-RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app
-WORKDIR /home/node/app
-COPY package*.json ./
-USER node
+# Fetching the minified node image on apline linux
+FROM node:slim
+
+# Setting up the work directory
+WORKDIR /express-docker
+
+# Copying all the files in our project
+COPY . .
+
+# Installing dependencies
 RUN npm install
-COPY --chown=node:node . .
+
+# Starting our application
+CMD [ "node", "index.js" ]
+
+# Exposing server port
 EXPOSE 3000 # Replace 3000 with your app's port
-CMD [ "npm", "start" ]  # Replace with your app's start command
